@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class Main{
+    public static void main(String args[])
+    {
+        Scanner a=new Scanner(System.in);
+        int b=a.nextInt();
+        int c=0;
+        while(b!=0)
+        {
+            int d=b%10;
+            c=c*10+d;
+            b=b/10;
+        }
+        System.out.println(c);
+    }
+}
