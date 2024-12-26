@@ -1,0 +1,46 @@
+import java.util.Scanner;
+class Hello{
+
+public static double area_of_circle(double r)
+{
+double c=3.1428*r*r;
+System.out.println("Area:");
+return c;
+}
+
+public static int area_of_rectangle(int l,int b)
+{
+int area=l*b;
+System.out.println("Area:");
+return area;
+}
+
+public static int area_of_square(int d)
+{
+int ar=d*d;
+System.out.println("Area:");
+return ar;
+}
+
+
+
+public static void main(String args[])
+{
+System.out.print("Enter radius:");
+Scanner sc=new Scanner(System.in);
+int r=sc.nextInt();
+double d=area_of_circle(r);
+System.out.println(d);
+
+System.out.print("Enter length and breadth:");
+int l=sc.nextInt();
+int b=sc.nextInt();
+System.out.println(area_of_rectangle(l,b));
+
+
+System.out.print("Enter side:");
+int de=sc.nextInt();
+System.out.println(area_of_square(de));
+
+}
+}
