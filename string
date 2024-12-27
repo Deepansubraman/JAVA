@@ -1,0 +1,103 @@
+import java.util.*;
+public class string {
+    public static void main(String args[])
+    {
+        String s1="deepan";
+        String s2="deepan";
+        String s3 = new String("deepan");
+        String s4 = new String("deepan");
+        System.out.println(s1==s2);
+        System.out.println(s1==s3);
+        System.out.println(s3==s4);
+        System.out.println(s1.equals(s2));
+        System.out.println(s1.equals(s3));
+        System.out.println(s3.equals(s4));
+
+
+
+        //string methods
+        Scanner sc=new Scanner(System.in);
+        System.out.println("String Methods");
+        String a=sc.nextLine();
+        StringBuilder s=new StringBuilder(a);
+        s.append(" MKCE karur");
+        System.out.println("after append -->  "+s);
+        s.insert(5, ",");
+        System.out.println("after insert--> "+s);
+        s.replace(5,6,"is");
+        System.out.println("after replace --> "+s);
+        s.delete(1,5);
+        System.out.println("after delete--> "+s);
+        s.reverse();
+        System.out.println("after reverse--> "+s);
+        System.out.println("capacity"+s.capacity());
+        
+        
+        
+        
+        
+        String str1 = "Normal String";
+		System.out.println("The String Length is : "+(str1.length()));
+		System.out.println("The indexOf operation  : "+(str1.indexOf('S')));
+		System.out.println("The charAt operation  : "+(str1.charAt(4)));
+		String str2 = "string";
+		System.out.println("The compare operation  : "+(str2.compareTo("string")));
+		System.out.println("The compare without case operation  : "+(str2.compareToIgnoreCase("string")));
+		System.out.println("The contains operation  : "+(str1.contains("mal ")));
+        System.out.println("ed with or not  :"+(str1.endsWith("g")));
+        System.out.println("replace operation:"+(str1.replace('a', 'A')));
+        System.out.println("replace all:"+(str1.replaceAll(" ", ",")));
+        System.out.println("The lower case operation  : "+(str1.toLowerCase()));
+		System.out.println("The upper case operation  : "+(str1.toUpperCase()));
+		System.out.println("The trim operation  : "+(str1.trim()));
+		System.out.println("The number to string  : "+(String.valueOf(123456789)));
+		char[] array = str1.toCharArray(); //changed to charecter array
+		System.out.println("The charector array is  : "+(Arrays.toString(array)));
+        // System.out.println("The substring operation is  : "+(str1.substring(7,15)));
+
+
+
+
+
+        //vowel count
+        int count=0;
+        for(char u:array)
+        {
+            if("AEIOUaeiou".indexOf(u) !=-1)
+            {
+                count++;
+            }
+        }
+        System.out.println(" number of Vowels in char array is:"+(count));
+
+
+
+        //count words
+        String b=sc.nextLine();
+        int count1=1;
+        for(int i=0;i<b.length();i++)
+        {
+            if(b.charAt(i)==' ')
+            {
+                count1++;
+            }
+        }
+        System.out.println("words in string:"+(count1));
+
+
+
+
+        //palindrome
+        String c=sc.next();
+        StringBuilder e=new StringBuilder(c);
+        String d=e.reverse().toString();
+        if(c.equals(d))
+        {
+            System.out.println("palindrome");
+        }
+        else{
+            System.out.println(" not palindrome");
+        }
+          
+    }
+}
