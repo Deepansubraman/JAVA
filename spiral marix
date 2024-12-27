@@ -1,0 +1,54 @@
+import java.util.*;
+class Main {
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int[][] arr=new int[a][b];
+        for(int i=0;i<a;i++)
+        {
+            for(int j=0;j<b;j++)
+            {
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        System.out.println("given matrix:");
+        for(int i=0;i<a;i++)
+        {
+            for(int j=0;j<b;j++)
+            {
+                System.out.print(arr[i][j]);
+            }
+            System.out.print("\n");
+        }
+        System.out.println("spiral matrix:");
+        int top=0;
+        int bottom=a-1;
+        int right=b-1;
+        int left=0;
+        while(top<=bottom && left<=right)
+        {
+            for(int i=left;i<right;i++)
+            {
+                System.out.print(arr[top][i]+" ");
+            }
+            for(int i=top;i<=bottom;i++)
+            {
+                System.out.print(arr[i][right]+" ");
+            }
+            for(int i=right-1;i>=left;i--)
+            {
+                System.out.print(arr[bottom][i]+" ");
+            }
+            for(int i=bottom-1;i>top;i--)
+            {
+                System.out.print(arr[i][left]+" ");
+            }
+            left++;
+            bottom--;
+            top++;
+            right--;
+        } 
+    }
+}
