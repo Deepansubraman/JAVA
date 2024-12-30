@@ -1,0 +1,51 @@
+public class Books{
+    String title;
+    String author;
+    boolean isavailable=true;
+    public Books(String title, String author) {
+        this.title = title;    
+        this.author = author;  
+    }
+    public void display()
+    {
+        System.out.println("title:"+title);
+        System.out.println("author:"+author);
+        System.out.println("available:"+((isavailable)?"yes":"no"));
+    }
+    public void borrowbook(){
+        if(isavailable)
+        {
+            isavailable=false;
+            System.out.println(title+" has been borrowed");
+        }
+        else{
+            System.out.println(title+" is currently unavailable.");
+        }
+    }
+    public void returnbook()
+    {
+        isavailable=true;
+        System.out.println("book returned");
+    }
+    
+}
+
+
+
+
+
+
+public class constructorobject {
+    public static void main(String[] args) {
+        Books book2 = new Books("Java", "Deepan");
+        Books book3 = new Books("C++", "Deepan Jr.");
+        book2.display();
+        book3.display();
+        // book2.borrowBook();  
+        // book2.borrowBook();  
+        // book2.returnBook(); 
+        // book2.borrowBook();  
+    }
+}
+
+
